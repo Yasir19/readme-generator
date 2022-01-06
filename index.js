@@ -4,22 +4,57 @@ inquirer.prompt([
     {
         type: 'input',
         name: 'email',
-        meassage: 'What is your email address'
+        meassage: 'What is your email address',
+        // validate the user input 
+        validate: emailInput =>{
+            if(emailInput){
+                return true;
+            }else{
+                console.log('Please enter your email')
+                return false;
+            }
+        } 
     },
     {
         type: 'input',
         name: 'github',
-        meassage: 'What is your GitHub '
+        meassage: 'What is your GitHub',
+        validate: githubInput =>{
+            if(githubInput){
+                return true;
+            }else{
+                console.log('Please enter your github username');
+                return false;
+            }
+        }
+        
     },
     {
         type : 'input',
         name : 'title',
-        message: 'What is the project title?'
+        message: 'What is the project title?',
+        validate: titleInput =>{
+            if(titleInput){
+                return true;
+            }else{
+                console.log('Please enter a title for your project');
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         name: 'description',
-        message:'Insert your project description.'
+        message:'Insert your project description.',
+        validate: descInput =>{
+            if(descInput){
+                return true;
+            }else{
+                console.log('Please enter a project decription');
+                return false;
+            }
+        }
+
     },
     {
         type: 'input',
