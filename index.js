@@ -1,10 +1,13 @@
 const inquirer = require("inquirer");
+const pageTemplate = require ('./util/page-template');
+const writeFile =require ('./util/write-readme');
 
-inquirer.prompt([
+const promptUser =() => {
+return inquirer.prompt([
     {
         type: 'input',
         name: 'email',
-        meassage: 'What is your email address',
+        message: 'What is your email address',
         // validate the user input 
         validate: emailInput =>{
             if(emailInput){
@@ -18,7 +21,7 @@ inquirer.prompt([
     {
         type: 'input',
         name: 'github',
-        meassage: 'What is your GitHub',
+        message: 'What is your GitHub',
         validate: githubInput =>{
             if(githubInput){
                 return true;
@@ -88,4 +91,22 @@ inquirer.prompt([
         message: 'What type of licence your project have?',
         choices: ['MIT', 'GNU AGPlv3', 'Apache License 2.0', 'OpenBDS', 'None']
     }
-])
+]);
+};
+promptUser()
+.then(projectAnswers => {
+    return pageTemplate(projectAnswers);
+})
+.then(readMe =>{
+    return writeFile(readMe)
+})
+.then (fileResponse =>{
+    console.log(fileResponse);
+})
+.catch(err => {
+    console.log(err)
+})
+// promptUser()
+// .then(userAnswers => console.log(userAnswers))
+// .then(promptProject)
+// .then(projectAnswers => console.log("this is my",projectAnswers))
