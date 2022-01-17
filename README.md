@@ -1,4 +1,5 @@
 
+
     **Readme generator** 
      ![GitHub license](https://img.shields.io/badge/license-GNU AGPlv3-blue.svg)
 
@@ -7,8 +8,10 @@
     
     * [Installation](#installation)
     * [Usage](#usage)
+
     
  * [License](#license)
+
 
     * [Usage](#usage)
 
@@ -31,6 +34,7 @@
         
     
     ## usage
+
     using the app require using the CLI
     ![Alt text]
 
