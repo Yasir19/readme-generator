@@ -48,7 +48,7 @@ return inquirer.prompt([
     {
         type: 'input',
         name: 'description',
-        message:'Insert your project description.',
+        message:'Enter your project description:',
         validate: descInput =>{
             if(descInput){
                 return true;
