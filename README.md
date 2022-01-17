@@ -1,18 +1,15 @@
 
     **Readme Generator** 
     
-    ![GitHub license](https://img.shields.io/badge/license--blue.svg)
+    ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
         
 
     ## Description
-    an apllication designed by using node.js and inquirer.js to capture the user input and generate readme file 
+    an application designed by using node.js and inquirer.js to capture the user input and generate readme file
     
     * [Installation](#installation)
     * [Usage](#usage)
-     
-    
-* [License](#license)
-
+    * [License](#license)
     * [Usage](#usage)
 
      
@@ -39,7 +36,7 @@
     using the app require using the CLI 
     
     *License*  
-    The project is licensed by undefined.
+    The project is licensed by MIT.
 
 
         
