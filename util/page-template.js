@@ -1,25 +1,19 @@
-const renderLicenseBadge = (license) => {
-  if (license !== "None") {
-    return `
-    ![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)
-        `;
+const renderLicenseBadge = (projectLicense) => {
+  if (projectLicense !== "None") {
+    return ` ![GitHub license](https://img.shields.io/badge/license-${projectLicense}-blue.svg)`;
   }
   return "";
 };
-const renderLicenseLink = (license) => {
-  if (license !== "None") {
-    return ` 
-    \n* [License](#license)\n`;
+const renderLicenseLink = (projectLicense) => {
+  if (projectLicense !== "None") {
+    return `\n* [License](#license)\n`;
   }
   return "";
 };
 
-const renderLicenseSection = (license) => {
-  if (license !== "None") {
-    return `
-    *License*  
-    The project is licensed by ${license}.
-`;
+const renderLicenseSection = (projectLicense) => {
+  if (projectLicense !== "None") {
+    return `*License*\n The project is licensed by ${projectLicense}.`;
   }
   return "";
 };
@@ -39,14 +33,14 @@ const renderInstruction = (instructions) => {
   }
 };
 
-const renderUsage = (usage, license) => {
+const renderUsage = (usage) => {
   if (!usage) {
     return "";
   } else {
     return `
     ## usage
     ${usage}
-    ${renderLicenseSection(license)}
+    
 
         `;
   }
@@ -79,17 +73,17 @@ const renderTest = (test) => {
 const generateMarkdown = (data) => {
   return `
     **${data.title}** 
-    ${renderLicenseBadge(data.license)}
+    ${renderLicenseBadge(data.projectLicense)}
 
     ## Description
     ${data.description}
     
     * [Installation](#installation)
     * [Usage](#usage)
-    ${renderLicenseLink(data.license)}
+    ${renderLicenseLink(data.projectLicense)}
     * [Usage](#usage)
 
-     ${renderLicenseBadge(data.license)}
+     ${renderLicenseBadge(data.projectLicense)}
 
      ## Installation
 
@@ -100,6 +94,7 @@ const generateMarkdown = (data) => {
      ====================
     ${renderInstruction(data.instructions)}
     ${renderUsage(data.usage)}
+    ${renderLicenseSection(data.projectLicense)}
     ${renderCont(data.contribution)}
     ${renderTest(data.test)}
      *Contact Me 

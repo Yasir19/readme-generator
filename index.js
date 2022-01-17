@@ -86,16 +86,16 @@ return inquirer.prompt([
         message: 'instruction for testing the app'
     },
     {
-        type: 'checkbox',
-        name: 'license',
+        type: 'list',
+        name: 'projectLicense',
         message: 'What type of licence your project have?',
         choices: ['MIT', 'GNU AGPlv3', 'Apache License 2.0', 'OpenBDS', 'None']
     }
 ]);
 };
 promptUser()
-.then(projectAnswers => {
-    return pageTemplate(projectAnswers);
+.then(userAnswers => {
+    return pageTemplate(userAnswers);
 })
 .then(readMe =>{
     return writeFile(readMe)
@@ -103,10 +103,12 @@ promptUser()
 .then (fileResponse =>{
     console.log(fileResponse);
 })
+.then(userAnswers => console.log(userAnswers)
+)
 .catch(err => {
     console.log(err)
 })
 // promptUser()
-// .then(userAnswers => console.log(userAnswers))
+
 // .then(promptProject)
 // .then(projectAnswers => console.log("this is my",projectAnswers))

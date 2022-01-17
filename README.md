@@ -1,23 +1,18 @@
 
-    **Readme Generator** 
-    
-    ![GitHub license](https://img.shields.io/badge/license--blue.svg)
-        
+    **Readme generator** 
+     ![GitHub license](https://img.shields.io/badge/license-GNU AGPlv3-blue.svg)
 
     ## Description
-    an apllication designed by using node.js and inquirer.js to capture the user input and generate readme file 
+    an application designed by using node.js and inquirer.js to capture the user input and generate readme file
     
     * [Installation](#installation)
     * [Usage](#usage)
-     
     
-* [License](#license)
+ * [License](#license)
 
     * [Usage](#usage)
 
-     
-    ![GitHub license](https://img.shields.io/badge/license--blue.svg)
-        
+      ![GitHub license](https://img.shields.io/badge/license-GNU AGPlv3-blue.svg)
 
      ## Installation
 
@@ -36,13 +31,12 @@
         
     
     ## usage
-    using the app require using the CLI 
-    
-    *License*  
-    The project is licensed by undefined.
-
+    using the app require using the CLI
+    ![Alt text]
 
         
+    *License*
+    The project is licensed by GNU AGPlv3.
     
     ## Contribution
     forking the repo is required, focusing on what is the best for the community, and respecting the different viewpoint and experiences
