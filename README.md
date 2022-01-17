@@ -36,7 +36,7 @@
     ## usage
 
     using the app require using the CLI
-    ![](assets/screen.png)
+    ![](assets/Screen.png)
 
         
     *License*
